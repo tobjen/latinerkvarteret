@@ -5,75 +5,122 @@
  <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Latinerkvarteret</title>
-<link href="https://fonts.googleapis.com/css?family=Cinzel:400,700|Lato:400,700|Roboto:400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700|Lato:400,700|Roboto:400,500&display=swap" rel="stylesheet">
+<!--søgeknap start-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--søgeknap slut-->
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="js.js"></script>
-  </head>
+    <link rel="icon" href="image/fav.png" type="image/png">
+    </head>
   <body>
 
+<a href="index.html"><div class="logo"><img src="image/logo.svg" alt="Logo"></div></a>
+
 <header>
-  <div class="logo"><img src="image/logo.svg" alt="Logo"></div>
   <nav>
     <ul>
-      <li><a href="#" title="Home">menu</a></li>
-      <li><a href="#" title="Blog">menu</a></li>
-      <li><a href="#" title="Work">menu</a></li>
-      <li><a href="#" title="Resources">menu</a></li>
-      <li><a href="#" title="Meta">menu</a></li>
+      <li><a href="index.html" title="Forside">Forside</a></li>
+      <li><a href="#" title="Omos">Om os</a></li>
+      <li><a href="#" title="Aktører">Aktører</a>
+        <span class="arrow">&#x25BC;</span>
+        <ul class="submenu">
+          <li><a href="#">Kultur</a></li>
+          <li><a href="#">Kunst</a></li>
+          <li><a href="#">Mode</a></li>
+          <li><a href="#">Design</a>
+          <li><a href="gastro.html">Gastronomi</a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#" title="Events">Events</a></li>
+      <li><a href="#" title="Kontakt">Kontakt</a>
+          <span class="arrow">&#x25BC;</span>
+        <ul class="submenu">
+          <li><a href="#">Virksomheder</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </li>
     </ul>
-  </nav>
-
-  <div class="video">
-  <div class="overlay"></div>
-  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-    <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
-  </video>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250">
-    <path fill="#f7f7f7" fill-opacity="1" d="M0,192L60,192C120,192,240,192,360,181.3C480,171,600,149,720,154.7C840,160,960,192,1080,197.3C1200,203,1320,181,1380,170.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
-  </svg>
+    <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Søg.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
   </div>
-</div>
+  </nav>
 </header>
 
-<!--BØLGE ANIMATION
-    <div class="mb-4 sm:mb-8 waves-container">
-   <div class="waves">
-     <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 100">
-       <defs>
-         <linearGradient id="waves-a" x1="0%" y1="50%" y2="50%">
-           <stop offset="0%" stop-color="#3023AE"/>
-           <stop offset="100%" stop-color="#C86DD7"/>
-         </linearGradient>
-         <linearGradient id="waves-b" x1=".258%" x2="101.258%" y1="49.75%" y2="49.75%">
-           <stop offset="0%" stop-color="#3023AE"/>
-           <stop offset="47.525%" stop-color="#53A0FD"/>
-           <stop offset="100%" stop-color="#B4EC51"/>
-         </linearGradient>
-       </defs>
-       <path class="path-1" fill="url(#waves-a)" d="M-2.48689958e-14,-7.38298311e-14 C100,-7.38298311e-14 167,50 267,50 C367,50 432,-6.54950269e-14 532,-7.38298311e-14 C632,-8.21565038e-14 700,50 800,50 C800,133.404483 800,150.071149 800,100 L5.20093986e-14,100 C-9.70686797e-17,134.422833 -2.57232001e-14,101.0895 -2.48689958e-14,-7.38298311e-14 Z" opacity=".6"/>
-       <path class="path-2" fill="url(#waves-b)" d="M-2.48689958e-14,-7.38298311e-14 C100,-7.38298311e-14 167,50 267,50 C367,50 432,-6.54950269e-14 532,-7.38298311e-14 C632,-8.21565038e-14 700,50 800,50 C800,133.404483 800,150.071149 800,100 L5.20093986e-14,100 C-9.70686797e-17,134.422833 -2.57232001e-14,101.0895 -2.48689958e-14,-7.38298311e-14 Z" opacity=".15"/>
-       <path class="path-3" fill="#ECEEF7" d="M-2.48689958e-14,-7.38298311e-14 C100,-7.38298311e-14 167,50 267,50 C367,50 432,-6.54950269e-14 532,-7.38298311e-14 C632,-8.21565038e-14 700,50 800,50 C800,133.404483 800,150.071149 800,100 L5.20093986e-14,100 C-9.70686797e-17,134.422833 -2.57232001e-14,101.0895 -2.48689958e-14,-7.38298311e-14 Z"/>
-     </svg>
-   </div>
- </div>
- BØLGE ANIMATION ------------------------>
+<div class="video">
+<div class="overlay"></div>
+<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+  <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+</video>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 240">
+  <path fill="#fff" fill-opacity="1" d="M0,192L60,192C120,192,240,192,360,181.3C480,171,600,149,720,154.7C840,160,960,192,1080,197.3C1200,203,1320,181,1380,170.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+</svg>
+</div>
+</div>
 
 <main>
   <div class="text-container">
-    <h1>Text</h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <div class="text">
+    <h1>Text</h1>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div></div>
+  <div class="kalender"><h3>Kalender</h3>
+    <div class="event">
+    <div class="events">Events</div>
+      <div class="aar">2019</div>
+    </div>
+    <div class="kalender-wrapper">
+      <div class="dato" id="red">26 sep</div>
+    <div class="arrengement" id="redstreg">Grand opening Kunstmuserum Brandts<br>
+    Tidspunkt: 17:30-21:00<br></div>
   </div>
-  <div class="kalender"><h1>Det sker</h1>
-    <h2>Begivenhed</h2>
-    Event event event event tekst kommer til at stå her.. Event event event event tekst kommer til at stå her..<br><br>
+    <br>
+    <div class="kalender-wrapper">
+      <div class="dato" id="green">26 sep</div>
+    <div class="arrengement" id="greenstreg">Open jam på Stuendterhuset<br>
+    Tidspunkt: 20:30-24:00<br></div>
+  </div>
+    <br>
 
-    <h2>Begivenhed</h2>
-    Event event event event tekst kommer til at stå her.. Event event event event tekst kommer til at stå her..
+    <div class="kalender-wrapper">
+      <div class="dato" id="pink">17-19 okt</div>
+    <div class="arrengement" id="pinkstreg">Magiske dage i Odense<br>
+    Tidspunkt: Varerierende<br></div>
   </div>
-</main>
+    <br>
+
+    <div class="kalender-wrapper">
+      <div class="dato" id="blue">01 nov</div>
+    <div class="arrengement" id="bluestreg">J-dag på Heidi's<br>
+    Tidspunkt: 19:00-05:00<br></div>
+  </div>
+    <br>
+
+    <div class="kalender-wrapper">
+      <div class="dato" id="yellow">02 okt</div>
+    <div class="arrengement" id="yellowstreg">Dybvaaaaad på Magasinet<br>
+    Tidspunkt: 19:00-21:00<br></div>
+  </div>
+    <br>
+    <a href="#" class="mere"><div class="website">Se flere events her</div></a>
+  </main>
 
 <div class="kort">
+  <div class="map-frame"><iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=700&amp;height=440&amp;hl=en&amp;q=Latinerkvarteret%20odense+(Latinerkvartert%20Odense)&amp;ie=UTF8&amp;t=&amp;z=16&amp;iwloc=B&amp;output=embed"></iframe>
 
+
+    </div>
 </div>
 
+<footer>
+  Copyright &copy 2019 www.latinerkvarteret.com All right rerseved.
+  <div class="social">
+  <a href="https://www.facebook.com/LatinerkvarteretOdense/" target="_blank"><img class="social" src="image/facebook.svg"></a><a href="https://www.instagram.com/latinerkvarteret.o/?hl=da&fbclid=IwAR0OTuKMTuh44LT1-jP8FJN5UH2CjDldyc6werfuAN4HnkqqGZ0p8uN5kaQ/" target="_blank"><img class="social" src="image/instagram.svg"></a>
+</div>
+</div>
   </body>
 </html>

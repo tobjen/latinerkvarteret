@@ -1,11 +1,11 @@
 *{
   padding: 0px;
   margin: 0px;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #f7f7f7;/*hsla(191, 10%, 95%, 1)*/;
+    background-color: #fff;/*hsla(191, 10%, 95%, 1)*/;
     font-family: 'Lato', sans-serif;
 }
 
@@ -15,6 +15,10 @@ header{
   font-size: 14px;
   font-weight: 700;
   font-family: 'Lato', sans-serif;
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+
 }
 
 .logo{
@@ -30,9 +34,8 @@ header{
 nav {
   display: flex;
   justify-content: flex-end;
-  flex-direction: row;
   z-index: 1;
-  font-size: 14px;
+  font-size: 12px;
   order: 2;
   font-weight: 700;
   padding: 10px;
@@ -47,8 +50,29 @@ ul {
 }
 
 li{
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   text-decoration: none;
+  position: relative;
+}
+
+ul li ul li{
+  padding: 10px;
+}
+
+.arrow{
+  padding: 0px;
+  font-size: 10px;
+}
+
+.arrow:hover{
+  padding: 0px;
+}
+
+span{
+  padding: 0px;
 }
 
 a{
@@ -57,9 +81,44 @@ a{
 }
 
 a:hover{
-  color: #959595;
+  color: #fff;
   text-decoration: underline;
 }
+
+.submenu{
+  flex-direction: column;
+  background-color: #f1f1f1;
+  margin-top: 5px;
+  width: 100%;
+  font-size: 12px;
+  text-transform: none;
+  position: absolute;
+}
+
+nav li:hover .submenu > li{
+  display: block;
+  top: 0px;
+  border-bottom: 1px solid #dcd9d9;
+}
+
+nav li:hover .submenu > li:hover{
+  display: block;
+  top: 0px;
+  background-color: #dcd9d9;
+}
+
+nav ul{
+  color: #fff;
+}
+
+.submenu li{
+  display: none;
+}
+
+.submenu li:hover{
+}
+
+/*video*/
 
 .video{
   position: relative;
@@ -99,7 +158,7 @@ a:hover{
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: black;
+  background-color: white;
   opacity: 0.2;
   z-index: 1;
 }
@@ -124,44 +183,314 @@ svg{
 main{
   display: flex;
   justify-content: center;
-  width: 70%;
+  width: 75%;
   margin-left: auto;
   margin-right: auto;
   font-size: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .text-container {
-    width:60%;
+    width:100%;
     min-width: 50%;
     margin-top: 0px;
-    padding: 5px;
+    font-size: 14px;
+    line-height: 20px;
   }
 
-main .kalender{
+.text{
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+}
+
+.kalender{
   justify-content: center;
-  padding: 10px;
-  width: 37%;
+  padding: 15px;
+  width: 50%;
   font-size: 12px;
-  background-color: #dadada;
+  color: #fff;
+  background-color: #1e2430;
 }
 
 h1{
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   padding-bottom: 5px;
   text-transform: uppercase;
 }
 
 h2{
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 600;
   padding-bottom: 5px;
+  justify-content: center;
+  align-items: center;
+  color: #ed4c5c;
   text-transform: uppercase;
 }
 
+h3{
+  font-size: 30px;
+  color: #ed4c5c;
+  font-weight: 700;
+  padding-bottom: 5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*KALENDER*/
+
+.event{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+
+.events{
+  background-color: #fff;
+  font-size: 22px;
+  color: #1e2430;
+  padding: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.aar{
+  color: #f0cc20;
+  margin-top: -4px;
+  font-size: 30px;
+  padding: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.kalender-wrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+
+.dato{
+  color: #fff;
+  width: 22%;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  justify-content:center;
+  display: flex;
+  flex-direction: row;
+}
+
+.arrengement{
+  display: flex;
+  padding-left: 10px;
+  width: 80%;
+}
+
+.website{
+  text-align: center;
+  font-weight:bold;
+  font-size: 16px;
+  margin-bottom: 5px
+}
+
+a.mere{
+  color: #fff;
+}
+
+a.mere:hover{
+  color: #ed4c5c;
+}
+
+/* FARVER*/
+
+#red{
+  background-color: #ed4c5c;
+}
+
+#redstreg{
+  border-bottom: 1px solid #ed4c5c;
+}
+
+#green{
+  background-color: #99c941;
+}
+
+#greenstreg{
+  border-bottom: 1px solid #99c941;
+}
+
+#pink{
+  background-color: #f7b4d0;
+}
+
+#pinkstreg{
+  border-bottom: 1px solid #f7b4d0;
+}
+
+#blue{
+  background-color: #009899;
+}
+
+#bluestreg{
+  border-bottom: 1px solid #009899;
+}
+
+#yellow{
+  background-color: #f0cc20;
+}
+
+#yellowstreg{
+  border-bottom: 1px solid #f0cc20;
+}
+
+
+/*AKTØRER*/
+
+.gastro-wrapper{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.beskrivelse{
+  width: 100%;
+  min-width: 50%;
+  margin-right: 20px;
+  background-color: #f7f7f7;
+  padding: 20px;
+  text-align: justify;
+}
+
+.billed{
+  flex-direction: column;
+  width: 50%;
+  min-height: 30px;
+}
+
+.billed2{
+  flex-direction: column;
+  width: 60%;
+  min-height: 40px;
+}
+
+.billed img{
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  flex-direction: column;
+  height: auto;
+}
+
+.billed2 img{
+  width: 94%;
+  margin-top: -60px;
+  margin-bottom: -30px;
+  flex-direction: column;
+  height: auto;
+}
+
+.bund{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  font-size: 12px;
+  border-top: 1px solid #dddbdb;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+.adresse{
+  display: flex;
+  width: 60%;
+}
+
+.aaben{
+  display: flex;
+  width: 30%;
+}
+
+/*KORT*/
+
 .kort{
   display: flex;
-  width: 100%
-  height: auto;
+  width: 100%;
+  background-color: #e3e3e3;
+  height: 100%
+}
+
+.map-frame {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.map-content {
+    z-index: 10;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 390px;
+    background-color: black;
+    color: #FFF;
+}
+
+/*SOCIAL MEDIA*/
+
+.social{
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+/*FOOTER*/
+
+footer{
+  min-height: 30px;
+  display: flex;
+  font-size: 12px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 0px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #000;
+}
+
+/*SØGE FUNKTION*/
+
+.search-container {
+  float: right;
+}
+
+.search-container input[type=text] {
+  padding: 3px;
+  margin-top: 8px;
+  font-size: 13px;
+  border: none;
+}
+
+.search-container button {
+  float: right;
+  padding: 3px 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background: #ccc;
 }
