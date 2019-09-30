@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #fff;/*hsla(191, 10%, 95%, 1)*/;
+    background-color: #fbfbfb;/*hsla(191, 10%, 95%, 1)*/;
     font-family: 'Lato', sans-serif;
 }
 
@@ -60,6 +60,7 @@ li{
 
 ul li ul li{
   padding: 10px;
+  color: #000;
 }
 
 .arrow{
@@ -77,12 +78,12 @@ span{
 
 a{
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 
 a:hover{
   color: #fff;
-  text-decoration: underline;
+
 }
 
 .submenu{
@@ -98,13 +99,25 @@ a:hover{
 nav li:hover .submenu > li{
   display: block;
   top: 0px;
+  color: #000;
   border-bottom: 1px solid #dcd9d9;
 }
 
 nav li:hover .submenu > li:hover{
   display: block;
   top: 0px;
-  background-color: #dcd9d9;
+  background-color: #ed4c5c;
+  color: #ed4c5c;
+}
+
+ul li ul li a{
+  padding: 10px;
+  color: #000;
+}
+
+ul li ul li a:hover{
+  padding: 10px;
+  color: #000;
 }
 
 nav ul{
@@ -116,6 +129,7 @@ nav ul{
 }
 
 .submenu li:hover{
+  color: #ed4c5c;
 }
 
 /*video*/
@@ -186,7 +200,7 @@ main{
   width: 75%;
   margin-left: auto;
   margin-right: auto;
-  font-size: 12px;
+  font-size: 16px;
   margin-bottom: 40px;
 }
 
@@ -202,6 +216,8 @@ main{
   display: flex;
   width: 90%;
   flex-direction: column;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .kalender{
@@ -214,16 +230,16 @@ main{
 }
 
 h1{
-  font-size: 22px;
+  font-size: 29px;
   font-weight: 700;
-  padding-bottom: 5px;
+  padding-bottom: 20px;
   text-transform: uppercase;
 }
 
 h2{
   font-size: 20px;
   font-weight: 600;
-  padding-bottom: 5px;
+  padding-bottom: 15px;
   justify-content: center;
   align-items: center;
   color: #ed4c5c;
@@ -231,12 +247,34 @@ h2{
 }
 
 h3{
-  font-size: 30px;
+  font-size: 29px;
   color: #ed4c5c;
   font-weight: 700;
   padding-bottom: 5px;
   text-align: center;
   text-transform: uppercase;
+}
+
+h4{
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.animation{
+  display: flex;
+  margin-top: 20px;
+  width: 50%;
+}
+
+/*JAVASCRIPT*/
+
+
+#wss{
+	opacity:0;
+	-webkit-transition:opacity 1.0s linear 0s;
+	transition:opacity 1.0s linear 0s;
+  color: #ed4c5c;
 }
 
 /*KALENDER*/
@@ -270,12 +308,13 @@ h3{
   width: 100%;
   display: flex;
   flex-direction: row;
-  margin-bottom: 5px;
+  margin-bottom: 5px
 }
 
 .dato{
   color: #fff;
-  width: 22%;
+  width: 23%;
+  margin-left: 10px;
   padding: 10px;
   text-align: center;
   font-weight: bold;
@@ -287,7 +326,7 @@ h3{
 .arrengement{
   display: flex;
   padding-left: 10px;
-  width: 80%;
+  width: 70%;
 }
 
 .website{
@@ -347,6 +386,19 @@ a.mere:hover{
   border-bottom: 1px solid #f0cc20;
 }
 
+#white{
+  color: #fff;
+}
+
+#whitestreg{
+  border-bottom: 1px solid #fff;
+}
+
+#redbund{
+  color: #fff;
+  border-top: 1px solid #c63449 !important;
+}
+
 
 /*AKTØRER*/
 
@@ -358,43 +410,26 @@ a.mere:hover{
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-  margin-bottom: 10px;
 }
 
 .beskrivelse{
   width: 100%;
   min-width: 50%;
-  margin-right: 20px;
+  margin-right: 0px;
   background-color: #f7f7f7;
   padding: 20px;
-  text-align: justify;
+  text-align: left;
 }
 
 .billed{
-  flex-direction: column;
+  position: relative;
+  overflow: hidden;
   width: 50%;
-  min-height: 30px;
-}
-
-.billed2{
-  flex-direction: column;
-  width: 60%;
-  min-height: 40px;
 }
 
 .billed img{
   width: 100%;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  flex-direction: column;
-  height: auto;
-}
-
-.billed2 img{
-  width: 94%;
-  margin-top: -60px;
-  margin-bottom: -30px;
-  flex-direction: column;
+  position: absolute;
   height: auto;
 }
 
@@ -405,7 +440,6 @@ a.mere:hover{
   font-size: 12px;
   border-top: 1px solid #dddbdb;
   padding-top: 10px;
-  margin-bottom: 10px;
 }
 
 .adresse{
@@ -415,7 +449,7 @@ a.mere:hover{
 
 .aaben{
   display: flex;
-  width: 30%;
+  width: 20%;
 }
 
 /*KORT*/
@@ -475,7 +509,7 @@ footer{
 
 .search-container input[type=text] {
   padding: 3px;
-  margin-top: 8px;
+  margin-top: 5px;
   font-size: 13px;
   border: none;
 }
@@ -483,7 +517,7 @@ footer{
 .search-container button {
   float: right;
   padding: 3px 6px;
-  margin-top: 8px;
+  margin-top: 5px;
   margin-right: 16px;
   background: #ddd;
   font-size: 13px;

@@ -12,6 +12,30 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="js.js"></script>
     <link rel="icon" href="image/fav.png" type="image/png">
+    <meta name = "keywords" content = "kunst, kultur, mode, gesign, gastronomi, odense, teater" />
+    <meta name = "description" content = "Et samlingspunkt for alle aldre, som gør dig helt unik. &#12702;" />
+
+
+    <script>
+var wss_i = 0;
+var wss_array = ["kultur","kunst","mode","design","gastronomi"];
+var wss_elem;
+function wssNext(){
+	wss_i++;
+	wss_elem.style.opacity = 0;
+	if(wss_i > (wss_array.length - 1)){
+		wss_i = 0;
+	}
+	setTimeout('wssSlide()',1000);
+}
+function wssSlide(){
+	wss_elem.innerHTML = wss_array[wss_i];
+	wss_elem.style.opacity = 1;
+	setTimeout('wssNext()',2000);
+}
+</script>
+
+
     </head>
   <body>
 
@@ -54,7 +78,7 @@
 <div class="video">
 <div class="overlay"></div>
 <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-  <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+  <source src="image/video/video.mp4" type="video/mp4">
 </video>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 240">
   <path fill="#fff" fill-opacity="1" d="M0,192L60,192C120,192,240,192,360,181.3C480,171,600,149,720,154.7C840,160,960,192,1080,197.3C1200,203,1320,181,1380,170.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
@@ -65,47 +89,69 @@
 <main>
   <div class="text-container">
     <div class="text">
-    <h1>Text</h1>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </div></div>
+      <h1>Latinerkvarteret tilbyder <span id="wss"></span></h1>
+      <script>wss_elem = document.getElementById("wss"); wssSlide(); </script>
+      Latinerkvarteret er et samlingspunkt for alt det skæve og sjove. Et sted for alle aldre, hvor der er rig mulighed for at dyrke ens kreative impulser og ikke mindst nyde fællesskabet. Her summer af liv og med vores mange tilbud inden for kultur, kunst, mode, design og gastronomi, kan du hurtigt fylde en dag med spændende aktiviteter.<br><br>
+      I Latinerkvarteret findes der noget for alle. Uanset om du har næsen dybt begravet i studiebøgerne, har brug for at udfordre dine smagsløg eller bare vil udforske gaderne, så er Latinerkvarteret altid det perfekte valg.
+      <br><br>
+      Så gå på opdagelse i kvarterets mange spændende forretninger, spisesteder og kulturelle tilbud næste gang, du er i Odense - vi lover dig, du bliver ikke skuffet!
+</div>
+
+<div class="animation"><img src="image/video/animation.gif"></div>
+</div>
   <div class="kalender"><h3>Kalender</h3>
     <div class="event">
     <div class="events">Events</div>
       <div class="aar">2019</div>
     </div>
     <div class="kalender-wrapper">
-      <div class="dato" id="red">26 sep</div>
-    <div class="arrengement" id="redstreg">Grand opening Kunstmuserum Brandts<br>
+      <div class="dato" id="green">26 sep</div>
+    <div class="arrengement" id="greenstreg">Grand opening Kunstmuserum Brandts<br>
     Tidspunkt: 17:30-21:00<br></div>
   </div>
     <br>
     <div class="kalender-wrapper">
-      <div class="dato" id="green">26 sep</div>
-    <div class="arrengement" id="greenstreg">Open jam på Stuendterhuset<br>
+      <div class="dato" id="blue">26 sep</div>
+    <div class="arrengement" id="bluestreg">Open jam på Studenterhuset<br>
     Tidspunkt: 20:30-24:00<br></div>
   </div>
     <br>
 
     <div class="kalender-wrapper">
-      <div class="dato" id="pink">17-19 okt</div>
-    <div class="arrengement" id="pinkstreg">Magiske dage i Odense<br>
+      <div class="dato" id="blue">17-19 okt</div>
+    <div class="arrengement" id="bluestreg">Magiske dage i Odense<br>
     Tidspunkt: Varerierende<br></div>
   </div>
     <br>
 
     <div class="kalender-wrapper">
-      <div class="dato" id="blue">01 nov</div>
-    <div class="arrengement" id="bluestreg">J-dag på Heidi's<br>
+      <div class="dato" id="pink">01 nov</div>
+    <div class="arrengement" id="pinkstreg">J-dag på Heidi's<br>
     Tidspunkt: 19:00-05:00<br></div>
   </div>
     <br>
 
     <div class="kalender-wrapper">
-      <div class="dato" id="yellow">02 okt</div>
-    <div class="arrengement" id="yellowstreg">Dybvaaaaad på Magasinet<br>
+      <div class="dato" id="blue">02 okt</div>
+    <div class="arrengement" id="bluestreg">Dybvaaaaad på Magasinet<br>
     Tidspunkt: 19:00-21:00<br></div>
   </div>
     <br>
+
+    <div class="kalender-wrapper">
+      <div class="dato" id="red">15 okt</div>
+    <div class="arrengement" id="redstreg">Imerco holder fødselsdag<br>
+    Tidspunkt: 10:00-17:30<br></div>
+  </div>
+    <br>
+
+    <div class="kalender-wrapper">
+      <div class="dato" id="yellow">9 nov</div>
+    <div class="arrengement" id="yellowstreg">Vivaldi holder modeshow<br>
+    Tidspunkt: 19:00-21:00<br></div>
+  </div>
+    <br>
+
     <a href="#" class="mere"><div class="website">Se flere events her</div></a>
   </main>
 
@@ -119,7 +165,7 @@
 <footer>
   Copyright &copy 2019 www.latinerkvarteret.com All right rerseved.
   <div class="social">
-  <a href="https://www.facebook.com/LatinerkvarteretOdense/" target="_blank"><img class="social" src="image/facebook.svg"></a><a href="https://www.instagram.com/latinerkvarteret.o/?hl=da&fbclid=IwAR0OTuKMTuh44LT1-jP8FJN5UH2CjDldyc6werfuAN4HnkqqGZ0p8uN5kaQ/" target="_blank"><img class="social" src="image/instagram.svg"></a>
+  <a href="https://www.facebook.com/Latinerkvarteret-projekt-116631089734492/" target="_blank"><img class="social" src="image/facebook.svg"></a><a href="https://www.instagram.com/latinerkvarteret.o/?hl=da&fbclid=IwAR0OTuKMTuh44LT1-jP8FJN5UH2CjDldyc6werfuAN4HnkqqGZ0p8uN5kaQ/" target="_blank"><img class="social" src="image/instagram.svg"></a>
 </div>
 </div>
   </body>
